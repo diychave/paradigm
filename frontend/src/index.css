@@ -1,0 +1,369 @@
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url("../../frontend/src/fonts/Gilroy-Regular.woff");
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url("../../frontend/src/fonts/Gilroy-SemiBold.woff");
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url("../../frontend/src/fonts/Gilroy-ExtraBold.woff");
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("../../frontend/src/fonts/Gilroy-Bold.woff");
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../../frontend/src/fonts/Gilroy-Medium.woff");
+}
+
+/* ── Tokens ─────────────────────────────────────────── */
+
+:root,
+[data-theme="dark"] {
+    --font-g-regular: "Gilroy-Regular";
+    --font-g-extra-bold: "Gilroy-ExtraBold";
+    --font-g-bold: "Gilroy-Bold";
+    --font-g-semi-bold: "Gilroy-SemiBold";
+    --font-g-medium: "Gilroy-Medium";
+
+    --f-white: #FAFAFA;
+    --f-secondary: #C9C9CF;
+
+    --bg-primary: #101012;
+    --bg-secondary: #242428;
+    --outline-default: #303036;
+    --bg-def: #303036;
+    --hover-green: #00DB6A;
+    --pressed-green: #52FFA5;
+    --primary-default: #01D3FE;
+    --primary-hover: #019CBC;
+    --primary-pressed: #4DE0FE;
+    --primary-focus: #FAFAFA;
+    --bg-primary-hover: #303036;
+    --bg-primary-pressed: #484851;
+    --tags-bg: #1010127a;
+
+    --desctop: 950px;
+    --tablet: 490px;
+
+
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    --f-white: #101012;
+    --f-secondary: #484851;
+
+    --bg-primary: #FAFAFA;
+    --bg-secondary: #F0F0F2;
+    --outline-default: #D6D6DC;
+    --bg-def: #E8E8EC;
+    --hover-green: #00DB6A;
+    --pressed-green: #52FFA5;
+    --primary-default: #01D3FE;
+    --primary-hover: #019CBC;
+    --primary-pressed: #4DE0FE;
+    --primary-focus: #101012;
+    --bg-primary-hover: #E8E8EC;
+    --bg-primary-pressed: #D6D6DC;
+    --tags-bg: #FAFAFA7a;
+    color-scheme: light;
+}
+
+/* ── Reset ───────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--f-white);
+    /* background-color: #F5FFFA; */
+    font-family: var(--font-g-regular), serif;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100dvh;
+    overflow-x: hidden !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    transition: 0.33s;
+}
+
+/* ── Layout helpers ──────────────────────────────────── */
+
+.container {
+    padding-inline: clamp(1.6rem, 3vw + 0.4rem, 8rem);
+}
+
+.section {
+    padding-block: 6.4rem;
+}
+
+.rel-section {
+    position: relative;
+    z-index: 0;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.bg-def {
+    background-color: var(--bg-def);
+}
+
+.none {
+    opacity: 0 !important;
+}
+
+/* ── Typography ──────────────────────────────────────── */
+
+.h2 {
+    font-family: var(--font-g-bold);
+    font-size: 2.8rem;
+    color: var(--f-white);
+}
+
+.h3 {
+    font-family: var(--font-g-semi-bold);
+    font-size: 2rem;
+    color: var(--f-white);
+}
+
+.p-small-secondary {
+    color: var(--f-secondary);
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    max-width: 47rem;
+}
+
+/* ── Buttons — base ──────────────────────────────────── */
+
+.btn-course {
+    font-family: var(--font-g-semi-bold);
+    letter-spacing: 1%;
+    position: relative;
+    z-index: auto;
+}
+
+/* Step-1 (cyan) */
+.step-1{
+    border: none;
+}
+.step-1,
+.course-card-step-1 {
+    font-size: 1.8rem;
+    background-color: var(--primary-default);
+    color: black;
+}
+
+.step-1:hover,
+.course-card-step-1:hover {
+    color: white;
+    background-color: var(--primary-hover) !important;
+}
+
+.step-1:focus-visible,
+.course-card-step-1:focus-visible {
+    color: white;
+    background-color: var(--primary-hover) !important;
+    border: 2px solid var(--bg-primary) !important;
+    outline: 2px solid var(--primary-hover) !important;
+}
+
+.step-1:active,
+.course-card-step-1:active {
+    color: black;
+    background-color: var(--primary-pressed) !important;
+}
+
+/* Step-2 (green outline) */
+
+.step-2 {
+    position: relative;
+    z-index: 1;
+    color: var(--f-white);
+    border: 1px solid #09FF80;
+    background: transparent;
+}
+
+.step-2:not(.header-btn):hover {
+    background-color: var(--hover-green);
+    color: white;
+}
+
+.step-2:not(.header-btn):focus-visible,
+.hero-desctop-btn:focus-visible {
+    background-color: var(--hover-green) !important;
+    border-color: var(--bg-primary);
+     color: white;
+    outline: 2px solid var(--hover-green) !important;
+}
+
+.step-2:not(.header-btn):active {
+    color: black;
+    background-color: var(--pressed-green);
+}
+
+/* Header ghost buttons */
+
+.header-btn:not(.step-1):hover {
+    color: var(--hover-green);
+}
+
+.header-btn:not(.step-1):active,
+.course-card-more:active {
+    color: var(--pressed-green) !important;
+}
+
+.header-btn:not(.step-1):focus-visible,
+.course-card-more:focus-visible {
+    color: #09FF80 !important;
+    outline: 1px solid #09FF80 !important;
+}
+
+/* ── Cards ───────────────────────────────────────────── */
+
+.base-card {
+    position: relative;
+    z-index: 2;
+    outline: 1px solid var(--outline-default);
+    border-radius: 1.6rem;
+    max-width: 42.4rem;
+    transition: 0.33s;
+}
+
+.base-card:not(.review-card-container):hover {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.856);
+}
+
+.card-padding {
+    border-radius: 1.6rem;
+    padding: 1.6rem;
+}
+
+.absolute-card-span {
+    font-family: var(--font-g-regular);
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    position: absolute;
+    width: fit-content;
+    top: 1.6rem;
+    right: 0.8rem;
+    background-color: var(--bg-primary-pressed);
+    border-radius: 1.2rem;
+    color: var(--f-white);
+}
+
+/* ── Misc ────────────────────────────────────────────── */
+
+.response-sliders-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.footer-nav li a:hover {
+    color: var(--hover-green) !important;
+}
+
+.footer-nav li a:active {
+    color: var(--pressed-green) !important;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (min-width: 492px) {
+    .h2 {
+        font-size: 3.8rem;
+    }
+
+    .h3 {
+        font-size: 2.2rem;
+    }
+
+    .p-small-secondary {
+        font-size: 1.5rem;
+    }
+
+    .step-1 {
+        font-size: 1.8rem;
+    }
+
+    input, textarea {
+        padding: 1.6rem;
+    }
+
+    .card-padding {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .h2 {
+        font-size: 4.8rem;
+    }
+
+    .h3 {
+        font-size: 2.4rem;
+    }
+
+    .p-small-secondary {
+        font-size: 1.6rem;
+    }
+
+    input, textarea {
+        padding: 1.8rem;
+    }
+
+    .course-card-step-1,
+    .course-card-more {
+        font-size: 1.8rem !important;
+        padding: 2.4rem !important;
+        line-height: 0 !important;
+        max-height: 54px !important;
+    }
+
+    .section {
+        padding-block: 12rem;
+    }
+
+    .card-padding {
+        padding: 2.4rem;
+    }
+}
+
+@media (min-width: 1550px) {
+    .container {
+        padding-inline: clamp(1.6rem, 10vw + 0.4rem, 13rem);
+    }
+}

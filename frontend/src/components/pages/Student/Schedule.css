@@ -1,0 +1,388 @@
+.sched {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    min-width: 0;
+}
+
+.sched-next {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.6rem;
+    padding: 2.2rem 2.4rem;
+    border-radius: 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    background:
+        linear-gradient(135deg, color-mix(in srgb, var(--primary-default) 18%, var(--bg-secondary)), var(--bg-secondary) 62%);
+    border: 1px solid color-mix(in srgb, var(--primary-default) 28%, var(--outline-default));
+    min-width: 0;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sched-next:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-default);
+}
+
+.sched-next.is-live {
+    border-color: var(--primary-default);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary-default) 16%, transparent);
+}
+
+.sched-kicker {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-default);
+    font-family: var(--font-g-semi-bold);
+}
+
+.sched-next-copy {
+    min-width: 0;
+}
+
+.sched-next h2 {
+    margin: 0;
+    font-family: var(--font-g-semi-bold);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--f-white);
+    letter-spacing: -0.03em;
+}
+
+.sched-next-meta {
+    margin: 0.8rem 0 0;
+    color: var(--f-secondary);
+    font-size: 1.45rem;
+}
+
+.sched-next-go {
+    flex-shrink: 0;
+    color: var(--primary-default);
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.4rem;
+    padding-bottom: 0.2rem;
+}
+
+.cal {
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    border-radius: 1.8rem;
+    padding: 2rem;
+    min-width: 0;
+}
+
+.cal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.cal-nav h2 {
+    margin: 0;
+    font-family: var(--font-g-semi-bold);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--f-white);
+    text-align: center;
+}
+
+.cal-arrow {
+    appearance: none;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--bg-primary);
+    color: var(--f-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.cal-arrow:hover:not(:disabled) {
+    color: var(--primary-default);
+}
+
+.cal-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.cal-weekdays span {
+    text-align: center;
+    color: var(--f-secondary);
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.cal-cell {
+    min-height: 9.2rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--outline-default);
+    background: var(--bg-primary);
+    padding: 0.8rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cal-cell.is-out {
+    opacity: 0.38;
+}
+
+.cal-cell.is-today {
+    box-shadow: inset 0 0 0 1px var(--primary-default);
+}
+
+.cal-cell.is-done {
+    background: color-mix(in srgb, var(--hover-green) 18%, var(--bg-primary));
+    border-color: color-mix(in srgb, var(--hover-green) 45%, var(--outline-default));
+}
+
+.cal-cell.is-planned {
+    background: color-mix(in srgb, #4d8dff 20%, var(--bg-primary));
+    border-color: color-mix(in srgb, #4d8dff 50%, var(--outline-default));
+}
+
+.cal-cell.is-cancelled {
+    background: color-mix(in srgb, #ff5c5c 18%, var(--bg-primary));
+    border-color: color-mix(in srgb, #ff5c5c 48%, var(--outline-default));
+}
+
+.cal-num {
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.35rem;
+    color: var(--f-white);
+}
+
+.cal-lessons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.cal-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: 0.6rem;
+    padding: 0.15rem 0.2rem;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cal-time em {
+    font-style: normal;
+    font-family: var(--font-g-medium);
+    font-size: 1.1rem;
+    opacity: 0.85;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.cal-time.is-done {
+    color: var(--hover-green);
+}
+
+.cal-time.is-planned {
+    color: #7eb8ff;
+}
+
+.cal-time.is-cancelled {
+    color: #ff7a7a;
+    text-decoration: line-through;
+}
+
+.cal-legend {
+    list-style: none;
+    margin: 1.6rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    color: var(--f-secondary);
+    font-size: 1.3rem;
+}
+
+.cal-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cal-legend i {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cal-legend i.is-done {
+    background: var(--hover-green);
+}
+
+.cal-legend i.is-planned {
+    background: #4d8dff;
+}
+
+.cal-legend i.is-cancelled {
+    background: #ff5c5c;
+}
+
+@media (max-width: 800px) {
+    .cal {
+        padding: 1.4rem 1rem;
+    }
+
+    .cal-cell {
+        min-height: 7.4rem;
+        padding: 0.5rem 0.35rem;
+        border-radius: 0.9rem;
+    }
+
+    .cal-time {
+        font-size: 1.1rem;
+    }
+
+    .cal-time em {
+        display: none;
+    }
+
+    .sched-next {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.8rem 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cal {
+        padding: 1.2rem 0.7rem 1.4rem;
+        border-radius: 1.4rem;
+    }
+
+    .cal-nav {
+        gap: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .cal-nav h2 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .cal-arrow {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .cal-weekdays,
+    .cal-grid {
+        gap: 0.25rem;
+    }
+
+    .cal-weekdays span {
+        font-size: 0.95rem;
+        letter-spacing: 0;
+        padding: 0.2rem 0;
+    }
+
+    .cal-cell {
+        min-height: 5.8rem;
+        padding: 0.3rem 0.12rem 0.35rem;
+        border-radius: 0.7rem;
+        gap: 0.15rem;
+    }
+
+    .cal-num {
+        font-size: 1.1rem;
+        padding-left: 0.15rem;
+    }
+
+    .cal-lessons {
+        gap: 0.1rem;
+    }
+
+    .cal-time {
+        font-size: 0.95rem;
+        padding: 0;
+        letter-spacing: -0.03em;
+    }
+
+    .cal-legend {
+        gap: 0.8rem 1rem;
+        font-size: 1.15rem;
+        margin-top: 1.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .cal {
+        padding: 1rem 0.45rem 1.2rem;
+    }
+
+    .cal-weekdays,
+    .cal-grid {
+        gap: 0.15rem;
+    }
+
+    .cal-cell {
+        min-height: 5.2rem;
+        padding: 0.22rem 0.06rem 0.28rem;
+        border-radius: 0.55rem;
+    }
+
+    .cal-num {
+        font-size: 1rem;
+        padding-left: 0.1rem;
+    }
+
+    .cal-time {
+        font-size: 0.88rem;
+        letter-spacing: -0.04em;
+    }
+
+    .cal-legend {
+        font-size: 1.1rem;
+        gap: 0.6rem 0.8rem;
+    }
+}

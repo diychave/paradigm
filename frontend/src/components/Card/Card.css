@@ -1,0 +1,99 @@
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background: linear-gradient(180deg,
+            var(--bg-secondary) 100%);
+    border-radius: 1.6rem;
+    margin-bottom: 2.4rem;
+    color: var(--f-white);
+    transition: color 0.3s ease;
+}
+
+.card-icon img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.card-icon svg path,
+.card-icon svg circle,
+.card-icon svg rect,
+.card-icon svg polygon,
+.card-icon svg line,
+.card-icon svg polyline,
+.card-icon svg ellipse {
+    stroke: currentColor !important;
+}
+
+.about-card-container {
+    border-radius: 1.6rem;
+    padding: 2.4rem;
+}
+
+@media (min-width: 492px) {
+    .about-card-container {
+        padding: 2.4rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .about-card-container {
+        padding: 3.2rem;
+    }
+}
+
+
+.card-num {
+    font-family: var(--font-g-bold);
+    font-size: 2.4rem;
+    color: var(--f-white);
+    margin-bottom: 0.8rem;
+
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: var(--f-white);
+    margin-bottom: 1.6rem;
+
+}
+
+.about-card {
+    position: relative;
+    z-index: 2;
+    outline: 1px solid var(--outline-default);
+    border-radius: 1.6rem;
+    ;
+}
+
+
+
+@media (min-width: 1200px) {
+    .about-card {
+        max-height: 32rem;
+    }
+
+    .card-icon {
+        padding: 1.4rem;
+        margin-bottom: 3.2rem;
+    }
+
+    .card-num {
+        font-size: 4.8rem;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .about-cards>*:last-child {
+        grid-column: 1 / -1;
+    }
+}

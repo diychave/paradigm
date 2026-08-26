@@ -1,0 +1,7 @@
+const CloseIcon = () => (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.75 0.75004L0.750042 10.75M0.75 0.75L10.75 10.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+);
+
+export default CloseIcon;

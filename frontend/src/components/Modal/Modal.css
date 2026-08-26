@@ -1,0 +1,25 @@
+.modal-outer {
+    position: fixed;
+    inset: 0;
+    background-color: #000000de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999;
+    isolation: isolate;
+
+    .form-section {
+        width: 100%;
+        max-width: 132rem;
+        padding: 0 clamp(1.8rem, 3vw, 3.2rem) !important;
+    }
+}
+
+@media (max-width: 950px) {
+    .modal-outer {
+        .form-section {
+            max-width: 56rem;
+        }
+    }
+
+}

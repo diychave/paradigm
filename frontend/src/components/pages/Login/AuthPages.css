@@ -1,0 +1,378 @@
+/* ── Login page ──────────────────────────────────────── */
+
+.login-page {
+    position: relative;
+    isolation: isolate;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--bg-primary);
+    color: var(--f-white);
+}
+
+/* Header on login: without hero bottom padding from the main page */
+.login-page header,
+.login-page header.header-sticky-scrolled {
+    padding-block: 1.6rem !important;
+    background-color: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--outline-default);
+}
+
+.login-main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.login-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("../../../assets/bg/main-bg.png") center / cover no-repeat;
+    transform: scale(1.04);
+    animation: login-bg-drift 18s ease-in-out infinite alternate;
+}
+
+.login-veil {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg, rgba(16, 16, 18, 0.55) 0%, rgba(16, 16, 18, 0.82) 45%, rgba(16, 16, 18, 0.94) 100%),
+        radial-gradient(ellipse at 50% 0%, rgba(1, 211, 254, 0.16), transparent 55%);
+}
+
+[data-theme="light"] .login-bg {
+    filter: saturate(0.85) brightness(1.08);
+}
+
+[data-theme="light"] .login-veil {
+    background:
+        linear-gradient(180deg, rgba(250, 250, 250, 0.72) 0%, rgba(250, 250, 250, 0.88) 42%, rgba(250, 250, 250, 0.96) 100%),
+        radial-gradient(ellipse at 50% 0%, rgba(1, 211, 254, 0.14), transparent 55%);
+}
+
+@keyframes login-bg-drift {
+    from {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+    to {
+        transform: scale(1.08) translate3d(-1.2%, -0.8%, 0);
+    }
+}
+
+.login-stage {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(42rem, calc(100% - 3.2rem));
+    margin: 0 auto;
+    padding: 2rem 0 6rem;
+    text-align: center;
+    animation: login-rise 0.65s ease both;
+}
+
+@keyframes login-rise {
+    from {
+        opacity: 0;
+        transform: translateY(1.2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: var(--f-white);
+    margin-bottom: 2.4rem;
+}
+
+.login-brand-icon {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.login-brand .logo-text {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: clamp(14rem, 28vw, 18rem);
+    height: auto;
+    padding-top: 0 !important;
+    color: var(--f-white);
+}
+
+.login-lead {
+    margin: 0 0 3.2rem;
+    max-width: 28rem;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--f-secondary);
+}
+
+.login-form {
+    width: 100%;
+    text-align: left;
+}
+
+.login-field {
+    margin-bottom: 1.6rem;
+}
+
+.login-field label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-g-medium);
+    font-size: 1.3rem;
+    color: var(--f-secondary);
+}
+
+.login-form .input-utility {
+    width: 100%;
+    border-radius: 1.6rem;
+    padding: 1.6rem 1.8rem;
+    font-size: 1.6rem;
+    color: var(--f-white);
+    background: color-mix(in srgb, var(--bg-primary) 78%, transparent);
+    backdrop-filter: blur(8px);
+    transition: outline-color 0.2s ease, background-color 0.2s ease;
+}
+
+.login-form .input-utility:focus {
+    background: color-mix(in srgb, var(--bg-primary) 92%, transparent);
+}
+
+[data-theme="light"] .login-form .input-utility {
+    background: #ffffff;
+    outline-color: var(--outline-default);
+}
+
+[data-theme="light"] .login-form .input-utility:hover {
+    outline-color: #93939f;
+}
+
+[data-theme="light"] .login-form .input-utility:focus {
+    background: #ffffff;
+    outline-color: var(--primary-hover);
+}
+
+.login-error {
+    margin: 0 0 1.4rem;
+    padding: 1.2rem 1.4rem;
+    border-radius: 1.2rem;
+    background: rgba(229, 57, 53, 0.14);
+    color: #ff8a80;
+    font-size: 1.4rem;
+}
+
+[data-theme="light"] .login-error {
+    background: rgba(229, 57, 53, 0.1);
+    color: #c62828;
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: 0.8rem;
+    border: none;
+    border-radius: 1.6rem;
+    padding: 1.8rem 2rem !important;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.login-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.login-foot {
+    margin: 2.4rem 0 0;
+    font-size: 1.4rem;
+    color: var(--f-secondary);
+}
+
+.login-foot-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    color: var(--primary-default);
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.login-foot-btn:hover {
+    color: var(--primary-pressed);
+}
+
+/* ── Account ─────────────────────────────────────────── */
+
+.auth-shell {
+    min-height: 100dvh;
+    background: var(--bg-primary);
+}
+
+.auth-shell header,
+.auth-shell header.header-sticky-scrolled {
+    padding-block: 1.6rem !important;
+    background-color: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--outline-default);
+}
+
+.auth-page {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: calc(100dvh - 8rem);
+    display: flex;
+    align-items: flex-start;
+    padding-block: 3rem 6rem;
+}
+
+.auth-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.auth-glow--cyan {
+    width: min(70vw, 52rem);
+    height: min(70vw, 52rem);
+    top: -12%;
+    right: -8%;
+    background: radial-gradient(circle, rgba(1, 211, 254, 0.18) 0%, transparent 70%);
+}
+
+.auth-card,
+.account-card {
+    position: relative;
+    z-index: 1;
+    width: min(72rem, 100%);
+    margin-inline: auto;
+    padding: clamp(2.4rem, 3vw, 3.6rem);
+    border-radius: 2.4rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+}
+
+.auth-error {
+    margin: 0 0 1.2rem;
+    padding: 1.2rem 1.4rem;
+    border-radius: 1.2rem;
+    background: rgba(229, 57, 53, 0.12);
+    color: #ff8a80;
+    font-size: 1.4rem;
+}
+
+.auth-submit {
+    border-radius: 1.6rem;
+    padding: 1.2rem 2rem !important;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.account-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.account-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.account-actions .auth-submit {
+    width: auto;
+}
+
+.account-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.6rem 0;
+}
+
+.account-tab {
+    border: 1px solid var(--outline-default);
+    background: transparent;
+    color: inherit;
+    border-radius: 1.2rem;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    font-family: var(--font-g-medium);
+}
+
+.account-tab.active {
+    background: var(--primary-default);
+    color: #101012;
+    border-color: transparent;
+}
+
+.account-progress {
+    height: 8px;
+    background: var(--outline-default);
+    border-radius: 99px;
+    overflow: hidden;
+    margin: 0.8rem 0 1.6rem;
+}
+
+.account-progress > i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--hover-green), var(--primary-default));
+}
+
+.account-lessons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-lessons li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--outline-default);
+    font-size: 1.5rem;
+}
+
+.account-lessons .done {
+    color: var(--hover-green);
+}
+
+.account-lesson-btn {
+    border: 1px solid var(--outline-default);
+    background: transparent;
+    color: inherit;
+    border-radius: 1rem;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-family: var(--font-g-medium);
+}
+
+.account-lesson-btn:disabled {
+    opacity: 0.6;
+}

@@ -1,0 +1,37 @@
+{% extends "cabinet/base.html" %}
+{% block title %}{{ enrollment.course.title }}{% endblock %}
+{% block content %}
+<p><a href="{% url 'cabinet-home' %}">← До курсів</a></p>
+<div class="card">
+  <h1 style="margin-top:0;">{{ enrollment.course.title }}</h1>
+  <p class="muted">{{ enrollment.course.subtitle }}</p>
+  <p>Прогрес: <strong>{{ done }}</strong> / {{ total }} ({{ percent }}%)</p>
+  <div class="progress"><i style="width: {{ percent }}%"></i></div>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0;">Уроки</h2>
+  {% if not lessons %}
+  <p class="muted">Уроки ще не додані менеджером.</p>
+  {% else %}
+  <ul class="lessons">
+    {% for lesson in lessons %}
+    <li>
+      <div>
+        <span class="{% if lesson.is_done %}done{% endif %}">
+          {% if lesson.is_done %}✓{% else %}○{% endif %}
+          {{ lesson.title }}
+        </span>
+      </div>
+      <form method="post" action="{% url 'cabinet-toggle-lesson' lesson.pk %}">
+        {% csrf_token %}
+        <button class="btn btn-ghost" type="submit">
+          {% if lesson.is_done %}Скасувати{% else %}Виконано{% endif %}
+        </button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}

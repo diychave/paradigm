@@ -1,0 +1,129 @@
+.mobile-nav {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    padding: 4.4rem 1.6rem 4.4rem 3.2rem !important;
+    background-color: var(--bg-secondary);
+    font-family: var(--font-g-medium);
+    transform: translate(100%);
+    transition: 0.33s;
+}
+
+.mobile-nav-ul {
+    padding: 3.2rem 0 35rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--f-white);
+    gap: 4.8rem;
+}
+
+.mobile-nav-ul li a {
+    font-size: 2.4rem;
+    line-height: 100%;
+}
+
+.mobile-nav-logout {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #e53935;
+    font: inherit;
+    font-size: 2.4rem;
+    line-height: 100%;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+}
+
+.mobile-nav-dropdown-toggle span {
+    font-size: 2.4rem;
+    line-height: 100%;
+}
+
+.mobile-nav-dropdown-toggle svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-dropdown.open .mobile-nav-dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.mobile-nav-dropdown-list {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.mobile-nav-dropdown.open .mobile-nav-dropdown-list {
+    max-height: 40rem;
+    margin-top: 2rem;
+}
+
+.mobile-nav-dropdown-list a {
+    font-size: 1.8rem;
+    color: var(--f-secondary);
+}
+
+.mobile-nav-top {
+    display: flex;
+    justify-content: end;
+}
+
+.mobile-nav-close-btn {
+    display: flex;
+    width: fit-content;
+    padding: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--bg-primary);
+}
+
+.mobile-nav.active {
+    transform: translate(0);
+
+}
+
+.mobile-nav-bottom button {
+    border: none;
+}
+
+.mobile-nav-bottom {
+    position: relative;
+}
+
+.phone-icon {
+    position: absolute;
+    left: -12px;
+}
+
+.mobile-nav-bottom {
+    position: absolute;
+    bottom: 1.6rem;
+    left: 3.2rem;
+    right: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-nav-bottom a {
+    font-size: 1.6rem !important;
+    line-height: 24px;
+
+}
+
+.mobile-nav-btn {
+    outline: none !important;
+    border: none !important;
+}

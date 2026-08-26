@@ -1,0 +1,306 @@
+  header {
+      background: transparent;
+      padding-block: 4.4rem 1.6rem !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid transparent;
+      transition: background-color 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+      max-width: 100%;
+      box-sizing: border-box;
+  }
+
+  header.header-sticky-scrolled {
+      background-color: var(--bg-primary) !important;
+      border-bottom: 1px solid var(--outline-default);
+      padding-block: 1.6rem !important;
+  }
+
+  .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+  }
+
+  .desctop-nav {
+      display: none;
+  }
+
+  .logo {
+      position: relative;
+      flex-shrink: 0;
+      width: 18rem;
+      height: 4rem;
+      z-index: 1;
+  }
+
+  .logo a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+  }
+
+  .logo-icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+  }
+
+  .logo-text {
+      position: absolute;
+      top: 50%;
+      left: clamp(30px, 4vw, 40px);
+      transform: translateY(-40%);
+      width: clamp(100px, 20vw, 155px);
+      height: auto;
+      color: var(--f-white);
+      padding-top: 0;
+  }
+
+  .logo-text path {
+      fill: currentColor !important;
+      stroke: none !important;
+  }
+
+  .burger-menu {
+      background-color: var(--bg-primary);
+      border-radius: 10px;
+      width: fit-content;
+      padding: 8px 8px 4px;
+      flex-shrink: 0;
+  }
+
+  .header-btns {
+      display: none;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+  }
+
+  .header-btns > * {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      height: 4.8rem;
+      padding: 0 2rem !important;
+      font-size: 1.6rem;
+      line-height: 1;
+      text-decoration: none;
+      white-space: nowrap;
+  }
+
+  .header-btns > *:first-child {
+      border: none;
+      padding: 0 1.2rem !important;
+  }
+
+  .desctop-nav {
+      display: none;
+  }
+
+  .header-course-tel {
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      font-family: var(--font-g-regular);
+      color: var(--f-secondary);
+      padding: 1rem !important;
+  }
+
+  .desctop-nav {
+      display: none;
+  }
+
+  .desctop-nav li a {
+      padding: 6px 16px;
+      border-radius: 8px;
+  }
+
+  .desctop-nav li a:hover {
+      outline: 1px solid white;
+  }
+
+  .desctop-nav-dropdown {
+      position: relative;
+  }
+
+  .desctop-nav-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+      padding: 6px 16px;
+      border-radius: 8px;
+  }
+
+  .desctop-nav-dropdown-toggle:hover {
+      outline: 1px solid white;
+  }
+
+  .desctop-nav-dropdown-toggle svg {
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+  }
+
+  .desctop-nav-dropdown.open .desctop-nav-dropdown-toggle svg {
+      transform: rotate(180deg);
+  }
+
+  .desctop-nav-dropdown-list {
+      position: absolute;
+      top: calc(100% + 1.2rem);
+      left: 0;
+      min-width: 20rem;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      background-color: var(--bg-secondary);
+      border-radius: 1.6rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s, max-height 0.25s ease;
+      z-index: 10;
+  }
+
+  .desctop-nav-dropdown.open .desctop-nav-dropdown-list {
+      max-height: 40rem;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      padding: 1.2rem;
+  }
+
+  .desctop-nav-dropdown-list a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      white-space: nowrap;
+  }
+
+  .desctop-nav-dropdown-list a:hover {
+      outline: 1px solid white;
+  }
+
+  /* Student mobile: logo left, burger + avatar right */
+  header.header-student .burger-menu {
+      order: 2;
+      margin-left: auto;
+  }
+
+  header.header-student .logo {
+      width: min(14rem, 38vw);
+      order: 1;
+  }
+
+  header.header-student .header-btns-student {
+      display: flex !important;
+      order: 3;
+      margin-left: 0;
+      gap: 0.8rem;
+      flex-shrink: 0;
+  }
+
+  @media (min-width:1315px) {
+      header.header-student .burger-menu,
+      header.header-student .header-btns-student,
+      header.header-student .logo {
+          order: initial;
+          margin-left: 0;
+      }
+
+      header.header-student .logo {
+          width: 20rem;
+      }
+
+      .desctop-nav {
+          padding: 0.6rem 1.2rem;
+          margin-left: 0;
+          display: flex;
+          color: var(--f-secondary);
+          font-size: 1.6rem;
+          gap: 2.4rem;
+          background-color: var(--bg-secondary);
+          align-items: center;
+          border-radius: 1.6rem;
+          flex-shrink: 1;
+          min-width: 0;
+      }
+
+      .logo {
+          width: 20rem;
+          height: 4.4rem;
+      }
+
+      .logo-icon {
+          position: absolute;
+          width: 32px;
+          height: 32px;
+      }
+
+      .burger-menu {
+          display: none;
+      }
+
+      .header-btns {
+          display: flex;
+      }
+
+      .header-course-tel {
+          display: none;
+      }
+  }
+
+  @media (min-width:1331px) {
+      header {
+          background: transparent;
+          padding-block: 2.5rem 8.6rem !important;
+      }
+
+      header.header-student,
+      header.header-student.header-sticky-scrolled {
+          padding-block: 1.6rem !important;
+          background-color: var(--bg-primary) !important;
+          border-bottom: 1px solid var(--outline-default);
+      }
+
+      .burger-menu {
+          display: none;
+      }
+
+      .header-btns {
+          display: flex;
+      }
+  }
+
+  .desctop-nav-student {
+      gap: 0.4rem !important;
+  }
+
+  .desctop-nav-student a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .desctop-nav-student a.active {
+      color: var(--primary-default);
+      outline: 1px solid var(--primary-default);
+  }
+
+  .header-btns-student > * {
+      height: auto !important;
+      padding: 0 !important;
+  }

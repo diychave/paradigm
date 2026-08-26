@@ -1,0 +1,13 @@
+.courses-container{
+   position: relative;
+   z-index: 2;
+}
+
+.courses-top-content {
+    color: var(--f-white);
+}
+
+.courses-top-content p {
+    margin: 1.6rem 0 3.2rem;
+}
+

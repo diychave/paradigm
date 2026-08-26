@@ -1,0 +1,397 @@
+.shimmer {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-def);
+}
+
+.shimmer::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    transform: translateX(-100%);
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .08),
+            transparent);
+
+    animation: skeleton-loading 1.4s infinite;
+}
+
+@keyframes skeleton-loading {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skeleton-age {
+    width: 8rem;
+    height: 3.2rem;
+
+    margin-left: auto;
+
+    border-radius: 1.2rem;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 20rem;
+
+    margin: 1.5rem 0 4.5rem;
+
+    border-radius: 1.2rem;
+}
+
+.skeleton-title {
+    width: 55%;
+    height: 2.8rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: .8rem;
+}
+
+.skeleton-description {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.skeleton-line {
+    height: 1.8rem;
+    width: 100%;
+
+    border-radius: .6rem;
+}
+
+.skeleton-line:nth-child(2) {
+    width: 96%;
+}
+
+.skeleton-line:nth-child(3) {
+    width: 90%;
+}
+
+.skeleton-line.short {
+    width: 70%;
+}
+
+.skeleton-more {
+    width: 11rem;
+    height: 4.8rem;
+
+    border-radius: 1rem;
+}
+
+.skeleton-btn {
+    width: 15rem;
+    height: 4.8rem;
+
+    border-radius: 1.4rem;
+}
+
+@media (min-width: 950px) {
+
+    .skeleton-more,
+    .skeleton-btn {
+        height: 5.4rem;
+    }
+}
+
+
+.course-hero-skeleton {
+    min-height: 85rem;
+}
+
+.hero-skeleton-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 4rem;
+}
+
+.hero-skeleton-header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-skeleton-logo {
+    width: 20rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.hero-skeleton-phone {
+    width: 16rem;
+    height: 2.4rem;
+    border-radius: .8rem;
+}
+
+.hero-skeleton-header-btn {
+    width: 16rem;
+    height: 5.4rem;
+    border-radius: 1.6rem;
+}
+
+.hero-skeleton-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    margin-top: 7rem;
+}
+
+.hero-skeleton-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    margin-bottom: 3rem;
+}
+
+.hero-skeleton-tag {
+    width: 14rem;
+    height: 3.2rem;
+    border-radius: 999px;
+}
+
+.hero-skeleton-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.hero-line {
+    height: 7rem;
+    border-radius: 1.2rem;
+}
+
+.hero-line:nth-child(1) {
+    width: 85%;
+}
+
+.hero-line:nth-child(2) {
+    width: 90%;
+}
+
+.hero-line.short {
+    width: 60%;
+}
+
+.hero-skeleton-text {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-text-line {
+    width: 100%;
+    height: 2.2rem;
+    border-radius: .8rem;
+}
+
+.hero-text-line.short {
+    width: 75%;
+}
+
+.hero-skeleton-btn {
+    margin-top: 4rem;
+
+    width: 32rem;
+    max-width: 100%;
+    height: 5.8rem;
+
+    border-radius: 1.6rem;
+}
+
+.hero-skeleton-image {
+    width: 100%;
+    max-width: 42rem;
+    height: 42rem;
+
+    border-radius: 2.4rem;
+
+    justify-self: center;
+}
+
+.shimmer {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--bg-secondary);
+}
+
+.shimmer::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    transform: translateX(-100%);
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .08),
+            transparent);
+
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (min-width: 950px) {
+    .hero-skeleton-content {
+        grid-template-columns: 1fr .9fr;
+        align-items: center;
+    }
+
+    .hero-skeleton-image {
+        justify-self: end;
+    }
+}
+
+.review-card-skeleton {
+    pointer-events: none;
+}
+
+.review-card-skeleton-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.skeleton-course {
+    position: absolute;
+
+    top: 1.6rem;
+    right: .8rem;
+
+    width: 9rem;
+    height: 3.2rem;
+
+    border-radius: 1.2rem;
+}
+
+.skeleton-name {
+    margin-top: 4rem;
+
+    width: 45%;
+    height: 2.8rem;
+
+    border-radius: .8rem;
+}
+
+.skeleton-review {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.skeleton-line {
+    width: 100%;
+    height: 1.8rem;
+
+    border-radius: .6rem;
+}
+
+.skeleton-line:nth-child(2) {
+    width: 95%;
+}
+
+.skeleton-line:nth-child(3) {
+    width: 90%;
+}
+
+.skeleton-line:nth-child(4) {
+    width: 85%;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+.shimmer {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-def);
+}
+
+.shimmer::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .08),
+            transparent);
+
+    transform: translateX(-100%);
+
+    animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.skeleton-pricing-tag {
+    width: 8rem;
+    height: 2.4rem;
+
+    margin-bottom: 1.6rem;
+
+    border-radius: .9rem;
+}
+
+.skeleton-pricing-lessons {
+    width: 60%;
+    height: 2rem;
+
+    margin-bottom: 1.2rem;
+
+    border-radius: .6rem;
+}
+
+.skeleton-pricing-price {
+    width: 45%;
+    height: 3.2rem;
+
+    margin-bottom: 1.6rem;
+
+    border-radius: .6rem;
+}
+
+.skeleton-pricing-per-lesson {
+    width: 70%;
+    height: 1.6rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: .6rem;
+}
+
+.skeleton-pricing-btn {
+    width: 100%;
+    height: 4.8rem;
+
+    margin-top: auto;
+
+    border-radius: 1.6rem;
+}

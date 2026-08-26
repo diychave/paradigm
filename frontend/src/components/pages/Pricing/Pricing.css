@@ -1,0 +1,134 @@
+.pricing-page {
+    color: var(--f-white);
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.pricing-page-title {
+    margin-bottom: 1.6rem;
+}
+
+.pricing-page-subtitle {
+    max-width: 60rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+}
+
+.pricing-card {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 2.4rem;
+}
+
+.pricing-card-tag {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 4px 8px;
+    margin-bottom: 1.6rem;
+
+    font-family: var(--font-g-regular);
+    font-size: 1.4rem;
+
+    background-color: var(--bg-primary-pressed);
+    border-radius: 0.9rem;
+    color: var(--f-white);
+}
+
+.pricing-card-discount {
+    top: 1.6rem;
+    right: 1.6rem;
+    background-color: var(--hover-green) !important;
+    color: var(--bg-primary);
+    font-family: var(--font-g-semi-bold);
+}
+
+.pricing-card-lessons {
+    font-family: var(--font-g-semi-bold);
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.pricing-card-price-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.pricing-card-price-old {
+    color: var(--f-secondary);
+    font-size: 1.6rem;
+    text-decoration: line-through;
+}
+
+.pricing-card-price-new {
+    font-family: var(--font-g-extra-bold);
+    font-size: 2.4rem;
+    color: var(--primary-default);
+}
+
+.pricing-card-per-lesson {
+    max-width: none;
+    margin-bottom: 1.6rem;
+}
+
+.pricing-card-savings {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--hover-green);
+    font-family: var(--font-g-medium);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.pricing-page-footnote {
+    margin-top: 3.2rem;
+    max-width: none;
+}
+
+@media (min-width: 650px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 950px) {
+    .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+        gap: 2.4rem;
+    }
+
+    .pricing-page-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .pricing-card {
+        padding-block: 4rem;
+    }
+
+    .pricing-card-lessons {
+        font-size: 2.4rem;
+    }
+
+    .pricing-card-price-new {
+        font-size: 3.2rem;
+    }
+}

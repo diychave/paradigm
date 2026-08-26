@@ -1,0 +1,156 @@
+.faq-section {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    color: var(--f-white);
+
+}
+
+.accordion-text-content {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+    position: relative;
+    z-index: 3;
+
+}
+
+.accordion {
+    width: 100%;
+    /* max-width: 700px; */
+    margin: 0 auto;
+    background: transparent;
+    font-family: var(--font-g-medium);
+    position: relative;
+    z-index: 4;
+
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--outline-default);
+    padding: 1.5rem 0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    cursor: pointer;
+}
+
+.accordion-left {
+    width: fit-content;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.accordion-index {
+    opacity: 0.6;
+    font-size: 1.8rem;
+}
+
+.accordion-title {
+    font-size: 1.8rem;
+}
+
+.accordion-faq-desc {
+    font-size: 1.4rem;
+}
+
+.accordion-icon {
+    padding: 1rem;
+    background-color: var(--bg-primary);
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.33s;
+}
+
+.accordion-icon:hover {
+    background-color: var(--bg-primary-hover);
+}
+
+.accordion-icon.open {
+    background-color: var(--bg-primary-pressed);
+}
+
+.accordion-icon.open:hover {
+    background-color: var(--bg-primary-hover);
+}
+
+.accordion-icon.open:active {
+    background-color: var(--bg-primary-pressed);
+}
+
+.accordion-icon:active {
+    background-color: var(--bg-primary-pressed);
+}
+
+
+.accordion-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon.open>svg {
+    transform: rotate(180deg);
+}
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.accordion-content.show {
+    max-height: 10rem;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+
+.accordion-status {
+    padding: 1.5rem 0;
+}
+
+.accordion-quest-btn {
+    width: 50%;
+    font-size: 1.6rem;
+    max-width: 25rem;
+    padding: 1.2rem !important;
+}
+
+@media(min-width: 1100px) {
+    .faq-section {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .accordion {
+        margin: 0 0 0 auto;
+        max-width: 63rem;
+    }
+
+    .accordion-header {
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    .accordion-quest-btn {
+        width: 100%;
+    }
+
+    .accordion-title {
+        font-size: 2rem !important;
+        min-width: fit-content;
+    }
+
+    .accordion-faq-desc {
+        font-size: 1.6rem;
+    }
+}

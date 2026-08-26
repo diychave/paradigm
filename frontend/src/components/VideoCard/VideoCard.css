@@ -1,0 +1,35 @@
+.video-card {
+    /* width: clamp(30.8rem, 90vw, 87.2rem); */
+    height: clamp(24.2rem, 45vw, 43.6rem) !important;
+    width: 100% !important;
+    max-width: 87.2rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.6rem;
+    overflow: hidden;
+    margin-top: 3.2rem;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.video-toggle-btn {
+    border: 1px solid whitesmoke;
+    border-radius: 50%;
+    padding: 1.2rem 1rem 1rem 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.33s;
+}

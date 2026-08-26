@@ -1,0 +1,19 @@
+{% extends "cabinet/base.html" %}
+{% block title %}Мої курси{% endblock %}
+{% block content %}
+<h1 style="margin-top:0;">Мої курси</h1>
+{% if not enrollments %}
+  <div class="card">
+    <p class="muted" style="margin:0;">Поки немає активних курсів. Менеджер додасть запис після заявки.</p>
+  </div>
+{% else %}
+  {% for e in enrollments %}
+  <a href="{% url 'cabinet-enrollment' e.pk %}" style="color:inherit; text-decoration:none;">
+    <div class="card">
+      <strong>{{ e.course.title }}</strong>
+      <div class="muted" style="margin-top:0.35rem;">{{ e.course.subtitle }} · {{ e.get_status_display }}</div>
+    </div>
+  </a>
+  {% endfor %}
+{% endif %}
+{% endblock %}

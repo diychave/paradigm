@@ -1,0 +1,316 @@
+.student-shell {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.student-shell header,
+.student-shell header.header-sticky-scrolled {
+    padding-block: 1.6rem !important;
+    background-color: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--outline-default);
+}
+
+.student-page {
+    padding: 2rem 0 4.8rem;
+    min-height: calc(100dvh - 8rem);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Same horizontal inset as the main site `.container` */
+.student-page-inner.container {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.student-page-inner > .h2 {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+
+.student-page-desc {
+    margin-top: 0.8rem;
+    max-width: min(48rem, 100%);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.student-page-body {
+    margin-top: 2rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.student-stub {
+    padding: 2rem;
+    border-radius: 1.6rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    max-width: min(48rem, 100%);
+    box-sizing: border-box;
+}
+
+.student-stub-btn {
+    display: inline-flex;
+    margin-top: 1.6rem;
+    text-decoration: none;
+    border-radius: 1.6rem;
+    padding: 1.4rem 2.2rem;
+}
+
+.student-dash-grid {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    width: 100%;
+}
+
+.student-dash-card {
+    display: block;
+    padding: 1.8rem;
+    border-radius: 1.6rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    min-width: 0;
+}
+
+.student-dash-card:hover {
+    border-color: var(--primary-default);
+    transform: translateY(-2px);
+}
+
+.student-dash-card h2 {
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.8rem;
+    margin: 0 0 0.6rem;
+    color: var(--f-white);
+}
+
+/* Course tiles — fluid grid, images cannot force overflow */
+
+.course-tiles {
+    display: grid;
+    gap: clamp(1.2rem, 2vw, 1.8rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+    width: 100%;
+    max-width: 100%;
+}
+
+.course-tile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.course-tile:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-default);
+}
+
+.course-tile-media {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    max-height: 28rem;
+    background: var(--bg-def);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.2rem, 3vw, 2.4rem);
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.course-tile-media img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.course-tile-fallback {
+    font-family: var(--font-g-bold);
+    font-size: clamp(4rem, 10vw, 8rem);
+    color: var(--primary-default);
+}
+
+.course-tile-body {
+    padding: clamp(1.4rem, 2vw, 1.8rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.course-tile-body h2 {
+    margin: 0;
+    font-family: var(--font-g-semi-bold);
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    color: var(--f-white);
+}
+
+.course-tile-body .p-small-secondary {
+    overflow-wrap: anywhere;
+}
+
+.course-tile-progress {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    color: var(--f-secondary);
+}
+
+.course-detail-back {
+    margin-bottom: 1.6rem;
+}
+
+.course-detail-back a {
+    color: var(--f-secondary);
+    text-decoration: none;
+}
+
+.course-detail-back a:hover {
+    color: var(--primary-default);
+}
+
+.course-detail-progress-card {
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    margin-bottom: 1.6rem;
+    min-width: 0;
+}
+
+.course-detail-progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.course-detail-bar {
+    height: 1rem;
+}
+
+.course-topic-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 0;
+}
+
+.course-topic {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+    padding: 1.4rem;
+    border-radius: 1.6rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    min-width: 0;
+}
+
+.course-topic.done {
+    border-color: color-mix(in srgb, var(--hover-green) 45%, var(--outline-default));
+}
+
+.course-topic-main {
+    display: flex;
+    gap: 1.2rem;
+    min-width: 0;
+}
+
+.course-topic-index {
+    flex-shrink: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    color: var(--f-secondary);
+    font-family: var(--font-g-semi-bold);
+}
+
+.course-topic h3 {
+    margin: 0 0 0.8rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.5rem;
+    color: var(--f-white);
+    overflow-wrap: anywhere;
+}
+
+.course-topic-files {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.course-topic-files a {
+    color: var(--primary-default);
+    font-size: 1.3rem;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.course-topic-files a:hover {
+    text-decoration: underline;
+}
+
+.course-topic .account-lesson-btn {
+    align-self: stretch;
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    .course-topic {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .course-topic .account-lesson-btn {
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+/* Mid screens: hide long name so header doesn't overflow */
+@media (max-width: 1314px) {
+    .student-shell .user-menu-name {
+        display: none;
+    }
+}

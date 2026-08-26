@@ -1,0 +1,19 @@
+{% extends "cabinet/base.html" %}
+{% block title %}Вхід{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 420px; margin: 3rem auto;">
+  <h1 style="margin-top:0;">Вхід студента</h1>
+  <p class="muted">Увійдіть, щоб бачити свої курси та прогрес.</p>
+  {% if form.errors %}
+  <p class="error">Невірний логін або пароль.</p>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    <label for="id_username">Логін</label>
+    <input type="text" name="username" id="id_username" autofocus required>
+    <label for="id_password">Пароль</label>
+    <input type="password" name="password" id="id_password" required>
+    <button class="btn" type="submit">Увійти</button>
+  </form>
+</div>
+{% endblock %}

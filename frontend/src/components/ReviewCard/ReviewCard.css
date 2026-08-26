@@ -1,0 +1,112 @@
+.review-card {
+    color: white;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-card-container {
+    margin: 5px;
+    min-height: 32rem;
+    max-height: 32rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    transition: max-height 0.3s ease;
+}
+
+.review-card-container:hover {
+    background: var(--bg-def) !important;
+    box-shadow: 0 0 32px black;
+    z-index: 999999;
+}
+
+.swiper-slide {
+    overflow: visible !important;
+}
+
+.swiper-wrapper {
+    overflow: visible !important;
+}
+
+.swiper {
+    overflow: visible !important;
+}
+
+.review-card-desc {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.review-card-container.has-toggle .review-card-desc {
+    padding-right: 3.2rem;
+}
+
+.review-card-toggle {
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+    background-color: var(--bg-primary);
+    border: none;
+    border-radius: 0.8rem;
+    color: var(--f-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.review-card-toggle:hover {
+    background-color: var(--bg-primary-hover);
+}
+
+.review-card-toggle:active {
+    background-color: var(--bg-primary-pressed);
+}
+
+.review-card-toggle:focus-visible {
+    outline: 1px solid var(--f-white);
+    outline-offset: 2px;
+}
+
+.review-card-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.review-card-container.expanded .review-card-toggle svg {
+    transform: rotate(180deg);
+}
+
+
+.review-card-name {
+    font-family: var(--font-g-semi-bold);
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--f-white);
+}
+
+@media (min-width: 950px) {
+    .response-slider-text-wrapper {
+        width: 125%;
+        z-index: 999;
+        margin-left: -190px;
+    }
+
+    .response-slider-text-wrapper .custom-slider .swiper .swiper-wrapper .swiper-slide {
+        width: 46rem !important;
+        flex-shrink: 0;
+        margin: 0 !important;
+    }
+
+    .review-card {
+        width: 46rem !important;
+    }
+}

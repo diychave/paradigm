@@ -1,0 +1,45 @@
+.offer-page {
+    color: var(--f-white);
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.offer-page-title {
+    margin-bottom: 2.4rem;
+}
+
+.offer-page-heading {
+    margin-top: 3.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.offer-page .p-small-secondary {
+    max-width: none;
+}
+
+.offer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.offer-list li {
+    padding-left: 0.4rem;
+}
+
+.offer-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+    padding-left: 2rem;
+}
+
+.offer-page-footnote {
+    margin-top: 3.2rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--outline-default);
+}

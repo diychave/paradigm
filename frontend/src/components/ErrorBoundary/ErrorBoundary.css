@@ -1,0 +1,28 @@
+.error-boundary {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.6rem;
+    padding: 3.2rem;
+    background-color: var(--bg-primary);
+}
+
+.error-boundary-btn {
+    margin-top: 0.8rem;
+    padding: 1.4rem 2.6rem;
+    border: none;
+    border-radius: 1.6rem;
+    background: var(--primary-default);
+    color: var(--bg-primary);
+    font-family: var(--font-g-medium);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.33s;
+}
+
+.error-boundary-btn:hover {
+    background: var(--primary-hover);
+}

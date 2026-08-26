@@ -1,0 +1,16 @@
+.button-utility {
+    border-radius: 1.6rem;
+    padding: 1.6rem;
+}
+
+@media (min-width: 492px) {
+    .button-utility {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .button-utility {
+        padding: 2.4rem;
+    }
+}

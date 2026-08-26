@@ -1,0 +1,192 @@
+.custom-slider {
+    position: relative;
+}
+
+.swiper-clip {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% + 6.4rem);
+    margin-inline: -3.2rem;
+    padding: 3.2rem;
+    box-sizing: border-box;
+}
+
+.arrows {
+    display: none;
+    /* display: flex; */
+    gap: 4rem;
+    height: fit-content;
+}
+
+.arrow-btn {
+    background-color: var(--bg-primary);
+    outline: 1px solid #93939F;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: .2s;
+
+}
+
+.arrow-btn:hover {
+    background-color: var(--bg-primary-hover);
+    outline: 1px solid var(--outline-default);
+}
+
+.arrow-btn:focus-visible {
+    background-color: var(--bg-primary);
+    outline: 1px solid var(--primary-focus);
+}
+
+.arrow-btn:active {
+    background-color: var(--bg-primary-pressed);
+    outline: 1px solid var(--bg-primary-pressed);
+}
+
+.arrow-btn-dis {
+    background-color: var(--bg-primary);
+    outline: 1px solid var(--outline-default);
+    padding: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: .33s;
+    filter: blur(1px);
+}
+
+.arrow-btn:active {
+    scale: 0.95;
+
+}
+
+.left-arrow {
+    rotate: 180deg;
+}
+
+
+.course-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+    overflow: hidden;
+}
+
+.dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: #555;
+    transition: 0.3s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.dot.active {
+    /* width: 20px; */
+    border-radius: 10px;
+    background: var(--primary-default);
+}
+
+.arrows-fullhide {
+    display: none !important;
+}
+
+.cources-container .custom-slider .swiper-clip .swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-wrapper .swiper-slide {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.response-slider-video-wrapper .custom-slider {
+    position: relative;
+}
+
+.cources-container .custom-slider {
+    height: 100%;
+    /* ← додати */
+}
+
+.cources-container .custom-slider .swiper-clip {
+    height: calc(100% + 6.4rem);
+    margin-block: -3.2rem;
+}
+
+.cources-container .custom-slider .swiper-clip .swiper {
+    height: 100%;
+    /* ← додати */
+}
+
+.cources-container .custom-slider .swiper-clip .swiper .swiper-wrapper .swiper-slide {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* ← Додати це */
+    height: 100%;
+    max-width: none !important;
+    max-height: none !important;
+    /* ← І це */
+}
+
+
+
+.cources-container .custom-slider .arrows {
+    margin-top: 4.8rem;
+}
+
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+
+
+@media (min-width: 950px) {
+    .arrows {
+        display: flex;
+        justify-content: end;
+    }
+
+    .course-dots {
+        display: none;
+
+    }
+
+    .response-sliders-wrapper {
+        gap: 6.4rem !important;
+    }
+
+    .response-slider-video-wrapper .custom-slider .arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+    }
+
+    .cources-container .custom-slider .swiper-clip .swiper {
+        height: 100%;
+        padding-top: 6.4rem;
+        /* ← додати */
+    }
+}
+
+@media (min-width: 1215px) {
+    .response-slider-video-wrapper .custom-slider .arrows {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        padding-top: 0;
+        z-index: 9;
+    }
+}

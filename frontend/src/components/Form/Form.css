@@ -1,0 +1,231 @@
+.form-section {
+    position: relative;
+    z-index: 98;
+}
+
+.form-section-content {
+    max-width: 80rem;
+}
+
+.form-section-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.8rem, 3vw, 3.2rem) !important;
+}
+
+.form-close-btn {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    display: flex;
+    width: fit-content;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bg-primary);
+    color: var(--f-white);
+    cursor: pointer;
+    z-index: 1;
+}
+
+input, textarea {
+    background-color: transparent;
+    outline: 1px solid var(--outline-default);
+    border: none;
+    resize: none;
+    width: 100%;
+    color: var(--f-white);
+    box-sizing: border-box;
+    display: block;
+    padding: 1.4rem;
+
+}
+
+textarea {
+    min-height: 8rem;
+}
+
+input:hover, textarea:hover {
+    outline-color: #93939F ;
+}
+
+input:focus, textarea:focus {
+    outline-color: var(--primary-hover) ;
+}
+
+input:focus-visible, textarea:focus-visible{
+    outline-color: var(--primary-focus) ;
+
+}
+input:user-valid,
+textarea:user-valid {
+    outline-color: var(--primary-hover);
+}
+
+label {
+    font-family: var(--font-g-medium);
+    color: var(--f-secondary);
+    font-size: 1.2rem;
+}
+
+
+.input-error {
+    outline: 1px solid #E53935 !important;
+}
+
+.error-message {
+    font-size: 1.4rem;
+    color: #E53935;
+}
+
+.error-wrapper {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+}
+
+.error-wrapper img {
+    width: 16px;
+    height: 16px;
+}
+
+.input-utility,
+.textarea-utility {
+    border-radius: 1.6rem;
+}
+
+
+
+.free-lesson-pr {
+    position: relative;
+    width: fit-content;
+}
+
+.free-lesson-pr::after {
+    content: "безкоштовний!";
+    position: absolute;
+    top: 0;
+    right: -13.3rem;
+    bottom: 0;
+    width: fit-content;
+    height: auto;
+    background-color: #09FF80;
+    border-radius: 1.6rem;
+    color: black;
+    padding: 1.6rem 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateZ(5deg);
+    font-size: 1.6rem;
+
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 3.2rem 0 0 !important;
+
+    max-width: 37rem;
+}
+
+form>*:last-child {
+    margin-top: 2rem;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.group textarea {
+    width: 100% !important;
+
+}
+
+@media (min-width: 372px) {
+    form {
+        max-width: 52rem;
+    }
+
+    .free-lesson-pr::after {
+        right: -18.3rem;
+        font-size: 2.2rem;
+
+    }
+
+
+}
+
+
+@media (min-width: 492px) {
+    form {
+        max-width: 52rem;
+    }
+}
+
+.form-section-inner.is-success {
+    min-height: 28rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-success {
+    width: 100%;
+    max-width: 52rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 2.4rem 1.2rem;
+}
+
+.form-success-icon {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #09FF80;
+    color: #111;
+}
+
+.form-success .h2,
+.form-success .h3,
+.form-success .p-small-secondary {
+    margin: 0;
+}
+
+@media (min-width: 950px) {
+    form {
+        max-width: 43rem;
+        padding: 0 !important;
+    }
+
+    .free-lesson-pr::after {
+        right: -19.3rem;
+    }
+
+    .form-section-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .form-section-inner.is-success {
+        min-height: 32rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

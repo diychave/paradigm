@@ -1,0 +1,7 @@
+Django>=4.2,<5
+djangorestframework>=3.14
+django-cors-headers>=4.3
+django-filter>=23.5
+Pillow>=10.0
+python-dotenv>=1.0
+psycopg2-binary>=2.9

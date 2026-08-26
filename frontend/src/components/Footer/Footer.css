@@ -1,0 +1,270 @@
+/* Mobile First */
+.footer-outer {
+    position: relative;
+}
+
+.footer {
+    background-color: var(--bg-secondary);
+    margin-top: 6.4rem;
+    border-top: 1px solid var(--bg-secondary);
+    box-shadow: 0 0 32px #000000D4;
+    z-index: 2;
+
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-top: 4.8rem;
+    padding-bottom: 3.2rem;
+}
+
+.footer-left {
+    width: fit-content;
+
+}
+
+.footer-right {
+    width: calc(20rem);
+
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-description {
+    font-size: 1.2rem !important;
+    line-height: 2rem;
+    max-width: 58rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 2.4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a {
+    color: var(--f-white);
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--f-secondary);
+}
+
+.footer-contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.footer-title {
+    font-family: var(--font-g-medium);
+    font-size: 1.8rem;
+    color: var(--f-white);
+    margin: 0;
+    font-weight: 100;
+}
+
+.footer-link {
+    color: var(--f-white);
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tel {
+    font-family: var(--font-g-medium);
+}
+
+.footer-link:hover {
+    color: var(--f-secondary);
+}
+
+.footer-link:focus-visible {
+    color: var(--hover-green);
+    outline: 1px solid var(--hover-green);
+    outline-offset: 2px;
+    border-radius: 0.4rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.ft-logo {
+    position: relative;
+    width: fit-content;
+    min-height: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.ft-logo a {
+    display: block;
+    position: relative;
+    width: fit-content;
+}
+
+.ft-logo a:focus-visible {
+    outline: 1px solid var(--hover-green);
+    outline-offset: 2px;
+    border-radius: 0.4rem;
+}
+
+.ft-logo .logo-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+}
+
+.ft-logo .logo-text {
+    position: absolute;
+    top: 5px;
+    left: clamp(30px, 4vw, 40px);
+    width: clamp(100px, 20vw, 155px);
+    height: auto;
+    color: var(--f-white) !important;
+}
+
+.ft-logo .logo-text path {
+    fill: currentColor !important;
+    stroke: none !important;
+}
+
+@media (min-width: 1165px) {
+    .ft-logo .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.social-icon-placeholder * {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--f-white);
+    transition: color 0.3s ease;
+}
+
+.social-icon-placeholder:hover {
+    border-color: var(--f-white);
+    background-color: var(--bg-secondary);
+}
+
+.social-icon-placeholder:hover *,
+.social-icon-placeholder:focus-visible * {
+    color: var(--hover-green);
+}
+
+.social-icon-placeholder:focus-visible {
+    outline: 1px solid var(--hover-green);
+    outline-offset: 2px;
+    border-radius: 0.4rem;
+}
+
+.social-icon-placeholder:active * {
+    color: var(--pressed-green) !important;
+}
+
+.footer-bottom {
+    background-color: var(--bg-primary);
+    padding: 1.2rem 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-bottom .container {
+    font-size: 1.4rem;
+    color: var(--f-white);
+
+    margin: 0;
+}
+
+.footer-copyright {
+    color: var(--f-white);
+}
+
+
+.form-2 {
+    position: absolute;
+    top: -150px;
+    left: -380px;
+    z-index: -1;
+}
+
+/* Desktop */
+@media (min-width: 950px) {
+    .footer-top {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        gap: 4rem;
+        align-items: start;
+        padding-top: 6rem;
+        padding-bottom: 6.4rem;
+    }
+
+    .footer-left {
+        max-width: 70rem;
+        gap: 2rem;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+        justify-self: end;
+        min-width: 10rem;
+    }
+
+    .social-icon-placeholder img {
+        width: 2.4rem;
+        height: 2.4rem;
+        object-fit: contain;
+    }
+
+    .footer-nav {
+        margin-top: 1rem;
+        gap: 2rem 3.2rem;
+        justify-content: flex-start;
+        font-family: var(--font-g-medium);
+    }
+
+    .footer-nav a {
+        font-size: 1.8rem;
+    }
+
+    .footer-title {
+        font-size: 2rem;
+    }
+
+    .footer-description {
+        font-size: 1.3rem !important;
+        line-height: 2.2rem;
+    }
+
+    .footer-bottom .container {
+        flex-direction: row;
+        align-items: center;
+    }
+}

@@ -1,0 +1,760 @@
+.teacher-shell {
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background:
+        radial-gradient(ellipse at 0% -10%, color-mix(in srgb, var(--primary-default) 10%, transparent), transparent 42%),
+        var(--bg-primary);
+    color: var(--f-white);
+}
+
+.teacher-wrap {
+    width: min(112rem, calc(100% - 3.2rem));
+    margin-inline: auto;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.teacher-top {
+    border-bottom: 1px solid var(--outline-default);
+}
+
+.teacher-top .teacher-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    min-height: 6.4rem;
+    padding-block: 1.2rem;
+}
+
+.teacher-brand {
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.6rem;
+    color: var(--f-white);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.teacher-brand span {
+    color: var(--primary-default);
+}
+
+.teacher-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.teacher-top-actions em {
+    font-style: normal;
+    color: var(--f-secondary);
+    font-size: 1.35rem;
+}
+
+.teacher-avatar {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--primary-default), var(--primary-pressed));
+    color: var(--bg-primary);
+    font-family: var(--font-g-bold);
+    font-size: 1.2rem;
+}
+
+.teacher-logout,
+.teacher-btn,
+.teacher-btn-ghost,
+.teacher-chip {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--font-g-semi-bold);
+}
+
+.teacher-logout,
+.teacher-btn-ghost {
+    background: transparent;
+    color: var(--f-secondary);
+    font-size: 1.35rem;
+}
+
+.teacher-logout:hover,
+.teacher-btn-ghost:hover {
+    color: var(--primary-default);
+}
+
+.teacher-main {
+    padding: 2.8rem 0 5.6rem;
+    min-width: 0;
+}
+
+.teacher-kicker {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary-default);
+    font-family: var(--font-g-semi-bold);
+}
+
+.teacher-main h1 {
+    margin: 0 0 0.6rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+}
+
+.teacher-lead {
+    margin: 0 0 2.2rem;
+    color: var(--f-secondary);
+    font-size: 1.5rem;
+    max-width: 52rem;
+}
+
+.teacher-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.6rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+.teacher-stat {
+    background: var(--bg-secondary);
+    border: 1px solid var(--outline-default);
+    border-radius: 1.6rem;
+    padding: 1.6rem 1.8rem;
+    min-width: 0;
+}
+
+.teacher-stat strong {
+    display: block;
+    font-family: var(--font-g-bold);
+    font-size: 2.4rem;
+    letter-spacing: -0.04em;
+}
+
+.teacher-stat span {
+    color: var(--f-secondary);
+    font-size: 1.3rem;
+}
+
+.teacher-card-students {
+    grid-column: 1 / 3;
+}
+
+.teacher-card-schedule {
+    grid-column: 3;
+}
+
+.teacher-card {
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+    border: 1px solid var(--outline-default);
+    border-radius: 1.8rem;
+    padding: 2rem;
+    min-width: 0;
+    backdrop-filter: blur(10px);
+}
+
+.teacher-card h2 {
+    margin: 0 0 1.6rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.7rem;
+}
+
+.teacher-student-link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    margin: 0 -0.4rem;
+    border-radius: 1.4rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+}
+
+.teacher-student-link:hover {
+    background: color-mix(in srgb, var(--primary-default) 8%, transparent);
+}
+
+.teacher-student-copy {
+    min-width: 0;
+}
+
+.teacher-student-copy strong {
+    display: block;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+}
+
+.teacher-student-copy span {
+    color: var(--f-secondary);
+    font-size: 1.25rem;
+    overflow-wrap: anywhere;
+}
+
+.teacher-student-link b {
+    color: var(--primary-default);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.teacher-slot {
+    display: grid;
+    grid-template-columns: 6.8rem minmax(0, 1fr) auto;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--outline-default);
+}
+
+.teacher-slot:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.teacher-slot time {
+    font-family: var(--font-g-bold);
+    font-size: 1.6rem;
+    letter-spacing: -0.03em;
+}
+
+.teacher-slot p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: var(--font-g-semi-bold);
+}
+
+.teacher-slot em {
+    font-style: normal;
+    color: var(--f-secondary);
+    font-size: 1.25rem;
+}
+
+.teacher-slot.is-cancelled time {
+    text-decoration: line-through;
+    color: #ff7a7a;
+}
+
+.teacher-chip {
+    border: 1px solid var(--outline-default);
+    background: transparent;
+    color: var(--f-secondary);
+    border-radius: 999px;
+    padding: 0.55rem 1.1rem;
+    font-size: 1.25rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.teacher-chip:hover,
+.teacher-chip.is-warn {
+    border-color: color-mix(in srgb, #ff5c5c 50%, var(--outline-default));
+    color: #ff7a7a;
+}
+
+.teacher-empty {
+    color: var(--f-secondary);
+    font-size: 1.4rem;
+}
+
+.teacher-back {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    color: var(--f-secondary);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.teacher-back:hover {
+    color: var(--primary-default);
+}
+
+.teacher-course {
+    margin-bottom: 1.6rem;
+}
+
+.teacher-course-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.teacher-course h3 {
+    margin: 0;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.8rem;
+}
+
+.teacher-course-head span {
+    color: var(--primary-default);
+    font-family: var(--font-g-semi-bold);
+}
+
+.teacher-progress {
+    height: 0.6rem;
+    border-radius: 999px;
+    background: var(--bg-primary);
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+
+.teacher-progress i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-default), var(--primary-pressed));
+}
+
+.teacher-topic {
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--outline-default);
+}
+
+.teacher-topic-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teacher-topic-head strong {
+    flex: 1;
+    min-width: 12rem;
+    font-family: var(--font-g-semi-bold);
+}
+
+.teacher-status {
+    font-size: 1.2rem;
+    color: var(--f-secondary);
+}
+
+.teacher-status.is-done {
+    color: var(--hover-green);
+}
+
+.teacher-hw {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background: var(--bg-primary);
+}
+
+.teacher-hw-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.teacher-hw input,
+.teacher-form input,
+.teacher-form textarea {
+    background: var(--bg-primary);
+    border: 1px solid var(--outline-default);
+    outline: none;
+    border-radius: 1.2rem;
+    color: var(--f-white);
+    padding: 1.1rem 1.2rem;
+    font-size: 1.45rem;
+    font-family: var(--font-g-regular);
+}
+
+.teacher-hw input {
+    width: 11rem;
+}
+
+.teacher-hw input:focus,
+.teacher-form input:focus,
+.teacher-form textarea:focus {
+    border-color: var(--primary-default);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-default) 18%, transparent);
+}
+
+.teacher-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.teacher-form input,
+.teacher-form textarea {
+    width: 100%;
+}
+
+.teacher-form textarea {
+    min-height: 6.4rem;
+    resize: vertical;
+}
+
+.teacher-btn {
+    background: var(--primary-default);
+    color: var(--bg-primary);
+    border-radius: 999px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.35rem;
+}
+
+.teacher-btn-block {
+    width: 100%;
+    margin-top: 0.8rem;
+    padding: 1.4rem 1.6rem;
+    font-size: 1.55rem;
+    border-radius: 1.4rem;
+}
+
+.teacher-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.teacher-error {
+    color: #ff7a7a;
+    font-size: 1.35rem;
+    margin: 0 0 1rem;
+}
+
+/* Login */
+.tl {
+    position: relative;
+    isolation: isolate;
+    min-height: 100dvh;
+    overflow: hidden;
+    background: var(--bg-primary);
+    color: var(--f-white);
+}
+
+.tl-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("../../../assets/bg/main-bg.png") center / cover no-repeat;
+    transform: scale(1.05);
+    animation: tl-bg-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes tl-bg-drift {
+    from {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+    to {
+        transform: scale(1.08) translate3d(-1.2%, -0.8%, 0);
+    }
+}
+
+.tl-veil {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(16, 16, 18, 0.88) 0%, rgba(16, 16, 18, 0.72) 42%, rgba(16, 16, 18, 0.55) 100%),
+        radial-gradient(ellipse at 80% 20%, rgba(1, 211, 254, 0.18), transparent 46%);
+}
+
+[data-theme="light"] .tl-veil {
+    background:
+        linear-gradient(90deg, rgba(250, 250, 250, 0.92) 0%, rgba(250, 250, 250, 0.78) 50%, rgba(250, 250, 250, 0.62) 100%),
+        radial-gradient(ellipse at 80% 20%, rgba(1, 211, 254, 0.16), transparent 46%);
+}
+
+.tl-layout {
+    position: relative;
+    z-index: 2;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(28rem, 42rem);
+    align-items: center;
+    gap: 4rem;
+    width: min(118rem, calc(100% - 4.8rem));
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.tl-intro {
+    max-width: 54rem;
+}
+
+.tl-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+}
+
+.tl-brand img {
+    width: 3.6rem;
+    height: 3.6rem;
+    object-fit: contain;
+}
+
+.tl-brand .logo-text {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: clamp(14rem, 28vw, 18rem);
+    height: auto;
+    padding-top: 0 !important;
+    color: var(--f-white);
+}
+
+.tl-kicker {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary-default);
+    font-family: var(--font-g-semi-bold);
+}
+
+.tl-intro h1 {
+    margin: 0 0 1.4rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: clamp(3.2rem, 5vw, 5.6rem);
+    letter-spacing: -0.05em;
+    line-height: 1.05;
+}
+
+.tl-copy {
+    margin: 0;
+    color: var(--f-secondary);
+    font-size: 1.7rem;
+    max-width: 38rem;
+    line-height: 1.45;
+}
+
+.tl-card {
+    width: 100%;
+    max-width: 42rem;
+    background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+    border: 1px solid color-mix(in srgb, var(--primary-default) 18%, var(--outline-default));
+    border-radius: 2.2rem;
+    padding: 2.8rem 2.4rem 2.4rem;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+    box-sizing: border-box;
+}
+
+.tl-card h2 {
+    margin: 0;
+    font-family: var(--font-g-semi-bold);
+    font-size: 2.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+.tl-card-lead {
+    margin: 0.6rem 0 0;
+    color: var(--f-secondary);
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+form.tl-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 100%;
+    max-width: none !important;
+    margin: 2rem 0 0;
+    padding: 0 !important;
+}
+
+.tl-form > *:last-child {
+    margin-top: 0.4rem;
+}
+
+.tl-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 0;
+    width: 100%;
+    font-family: var(--font-g-medium);
+    color: var(--f-secondary);
+    font-size: 1.3rem;
+}
+
+.tl-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-primary);
+    border: 1px solid var(--outline-default);
+    outline: none !important;
+    border-radius: 1.4rem;
+    color: var(--f-white);
+    padding: 1.3rem 1.4rem;
+    font-size: 1.5rem;
+    font-family: var(--font-g-regular);
+    line-height: 1.3;
+}
+
+.tl-input:hover {
+    outline: none !important;
+    border-color: #93939f;
+}
+
+.tl-input:focus,
+.tl-input:focus-visible,
+.tl-input:user-valid {
+    outline: none !important;
+    border-color: var(--primary-default);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-default) 18%, transparent);
+}
+
+.tl-submit {
+    appearance: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    background: var(--primary-default);
+    color: var(--bg-primary);
+    border-radius: 1.4rem;
+    padding: 1.4rem 1.6rem;
+    font-family: var(--font-g-semi-bold);
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+.tl-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.tl-form .teacher-error {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .teacher-board {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .teacher-card-students,
+    .teacher-card-schedule {
+        grid-column: 1 / -1;
+    }
+
+    .tl-layout {
+        grid-template-columns: 1fr;
+        width: min(100% - 3.2rem, 44rem);
+        padding: 3.2rem 0 4.8rem;
+        gap: 2.4rem;
+        align-content: center;
+    }
+
+    .tl-intro h1 {
+        font-size: 3.2rem;
+    }
+
+    .tl-brand {
+        margin-bottom: 1.6rem;
+    }
+
+    .teacher-top-actions em {
+        display: none;
+    }
+
+    .teacher-slot {
+        grid-template-columns: 5.6rem minmax(0, 1fr);
+    }
+
+    .teacher-chip {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .teacher-topic-head {
+        align-items: flex-start;
+    }
+
+    .teacher-hw {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .teacher-hw-actions {
+        width: 100%;
+    }
+
+    .teacher-hw input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .teacher-wrap {
+        width: min(112rem, calc(100% - 2.4rem));
+    }
+
+    .teacher-board {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-card-students,
+    .teacher-card-schedule,
+    .teacher-stat {
+        grid-column: auto;
+    }
+
+    .teacher-main {
+        padding: 2rem 0 4rem;
+    }
+
+    .teacher-main h1 {
+        font-size: 2.4rem;
+    }
+
+    .teacher-card,
+    .teacher-stat {
+        padding: 1.6rem;
+        border-radius: 1.4rem;
+    }
+
+    .teacher-student-link {
+        grid-template-columns: auto minmax(0, 1fr);
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .teacher-student-link b {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .teacher-brand {
+        font-size: 1.4rem;
+    }
+
+    .teacher-avatar {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.1rem;
+    }
+
+    .teacher-logout {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,321 @@
+/* Спільне для всіх glow */
+.glow-green, .glow-blue {
+  position: absolute;
+  width: 50rem;
+  height: 35rem;
+
+  filter: blur(120px);
+  opacity: 0.7;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Green glow */
+.glow-green {
+  background: radial-gradient(circle,
+      var(--hover-green) 0%,
+
+      #00DB6AFF 2%,
+      #00DB6AFF 4%,
+      #00DB6AFE 6%,
+      #00DB6AFE 8%,
+      #00DB6AFD 10%,
+      #00DB6AFD 12%,
+      #00DB6AFC 14%,
+      #00DB6AFC 16%,
+      #00DB6AFB 18%,
+      #00DB6AFB 20%,
+
+      #00DB6AFA 22%,
+      #00DB6AF9 24%,
+      #00DB6AF8 26%,
+      #00DB6AF7 28%,
+      #00DB6AF6 30%,
+      #00DB6AF4 32%,
+      #00DB6AF2 34%,
+      #00DB6AF0 36%,
+      #00DB6AEE 38%,
+      #00DB6AEC 40%,
+
+      #00DB6AEA 42%,
+      #00DB6AE7 44%,
+      #00DB6AE5 46%,
+      #00DB6AE3 48%,
+      #00DB6AE0 50%,
+      #00DB6ADD 52%,
+      #00DB6ADA 54%,
+      #00DB6AD7 56%,
+      #00DB6AD3 58%,
+      #00DB6ACF 60%,
+
+      #00DB6ACA 62%,
+      #00DB6AC5 64%,
+      #00DB6AC0 66%,
+      #00DB6ABA 68%,
+      #00DB6AB4 70%,
+      #00DB6AAD 72%,
+      #00DB6AA6 74%,
+      #00DB6A9F 76%,
+      #00DB6A97 78%,
+      #00DB6A8F 80%,
+
+      #00DB6A86 82%,
+      #00DB6A7D 84%,
+      #00DB6A73 86%,
+      #00DB6A68 88%,
+      #00DB6A5D 90%,
+      #00DB6A51 92%,
+      #00DB6A45 94%,
+      #00DB6A38 95.5%,
+      #00DB6A2C 97%,
+      #00DB6A1F 98%,
+
+      #00DB6A12 99%,
+      #00DB6A08 99.5%,
+      transparent 100%);
+}
+
+
+/* .glow-blue{
+  background-color: var(--primary-default);
+} */
+/* Blue glow */
+.glow-blue {
+  background: radial-gradient(circle,
+      var(--primary-default) 1%,
+
+      #01D3FEFF 2%,
+      #01D3FEFF 4%,
+      #01D3FEFE 6%,
+      #01D3FEFE 8%,
+      #01D3FEFD 10%,
+      #01D3FEFD 12%,
+      #01D3FEFC 14%,
+      #01D3FEFC 16%,
+      #01D3FEFB 18%,
+      #01D3FEFB 20%,
+
+      #01D3FEFA 22%,
+      #01D3FEF9 24%,
+      #01D3FEF8 26%,
+      #01D3FEF7 28%,
+      #01D3FEF6 30%,
+      #01D3FEF4 32%,
+      #01D3FEF2 34%,
+      #01D3FEF0 36%,
+      #01D3FEEE 38%,
+      #01D3FEEC 40%,
+
+      #01D3FEEA 42%,
+      #01D3FEE7 44%,
+      #01D3FEE5 46%,
+      #01D3FEE3 48%,
+      #01D3FEE0 50%,
+      #01D3FEDD 52%,
+      #01D3FEDA 54%,
+      #01D3FED7 56%,
+      #01D3FED3 58%,
+      #01D3FECF 60%,
+
+      #01D3FECA 62%,
+      #01D3FEC5 64%,
+      #01D3FEC0 66%,
+      #01D3FEBA 68%,
+      #01D3FEB4 70%,
+      #01D3FEAD 72%,
+      #01D3FEA6 74%,
+      #01D3FE9F 76%,
+      #01D3FE97 78%,
+      #01D3FE8F 80%,
+
+      #01D3FE86 82%,
+      #01D3FE7D 84%,
+      #01D3FE73 86%,
+      #01D3FE68 88%,
+      #01D3FE5D 90%,
+      #01D3FE51 92%,
+      #01D3FE45 94%,
+      #01D3FE38 95.5%,
+      #01D3FE2C 97%,
+      #01D3FE1F 98%,
+
+      #01D3FE12 99%,
+      #01D3FE08 99.5%,
+      transparent 100%);
+}
+
+.hero-1 {
+  top: 650px;
+  left: -360px;
+  z-index: -1;
+}
+
+.hero-2 {
+  top: 1550px;
+  right: -360px;
+  z-index: -1;
+
+}
+
+.hero-3 {
+  display: none;
+  z-index: -1;
+
+
+}
+
+.accordion-2 {
+  top: 80px;
+  left: -300px;
+  height: 390px;
+  z-index: -1;
+
+}
+
+.response-1 {
+  top: 40px;
+  opacity: 0.4;
+  right: -380px;
+  z-index: -1;
+
+}
+
+.form-2 {
+  top: 700px;
+  left: -380px;
+  z-index: -1;
+
+}
+
+
+.about-course-1-1 {
+  top: 40px;
+  left: -300px;
+  z-index: -1;
+  opacity: 0.3;
+  height: 600px;
+}
+
+.about-course-1-2 {
+  bottom: -10px;
+  right: -300px;
+  z-index: -1;
+  opacity: 0.3;
+  height: 400px;
+}
+
+.tabs-1 {
+  top: -90px;
+  left: -300px;
+  opacity: .3;
+  z-index: -1;
+  height: 700px;
+}
+
+.tabs-2 {
+  bottom: -550px;
+  right: -300px;
+  opacity: .3;
+  z-index: -1;
+  height: 700px;
+}
+
+.child-1 {
+  display: none;
+}
+
+
+@media (min-width:520px) {
+  .hero-2 {
+    top: -50px;
+    right: -350px;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}
+
+@media (min-width:950px) {
+  .form-2 {
+    top: 500px;
+    left: -380px;
+    opacity: 0.4;
+
+  }
+
+  .tabs-1 {
+    display: none;
+  }
+
+  .tabs-2 {
+    bottom: -250px;
+    right: -300px;
+    opacity: .3;
+    z-index: -1;
+    height: 700px;
+  }
+  .about-course-1-1 {
+  display: none;
+}
+
+  .response-1 {
+    top: 440px;
+    right: -480px;
+    opacity: 0.6;
+    width: 80rem;
+    height: 61rem;
+    opacity: .3;
+  }
+
+  .accordion-2 {
+    display: none;
+  }
+
+  .child-1 {
+    top: 150px;
+    left: -100px;
+    opacity: .2;
+    z-index: -1;
+    height: 700px;
+    display: block;
+  }
+
+  .hero-1 {
+    top: 550px;
+    left: -80px;
+    width: 45rem;
+    height: 38rem;
+    opacity: 0.5;
+  }
+
+  .hero-2 {
+    top: 160px;
+    right: -200px;
+    z-index: 1;
+    opacity: 0.2;
+  }
+
+  .hero-3 {
+    width: 60rem;
+    height: 40rem;
+    top: 1250px;
+    opacity: 0.4;
+    right: -440px;
+    display: block;
+  }
+}
+
+@media (min-width:1200px) {
+  .hero-3 {
+    width: 70rem;
+    opacity: 0.5;
+    border-radius: 50%;
+    height: 70rem;
+    top: 1550px;
+    display: block;
+  }
+
+  .hero-1 {
+    left: -180px;
+  }
+}

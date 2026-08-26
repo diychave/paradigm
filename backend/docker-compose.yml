@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: paradigm
+      POSTGRES_USER: paradigm
+      POSTGRES_PASSWORD: paradigm
+    ports:
+      - "5432:5432"
+    volumes:
+      - paradigm_pg:/var/lib/postgresql/data
+
+volumes:
+  paradigm_pg:
